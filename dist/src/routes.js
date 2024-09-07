@@ -1,11 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.router = void 0;
 const express_1 = require("express");
-const multer_1 = __importDefault(require("multer"));
 const createUserController_1 = require("./controllers/user/createUserController");
 const AuthUserController_1 = require("./controllers/user/AuthUserController");
 const DetailUserController_1 = require("./controllers/user/DetailUserController");
@@ -22,10 +18,10 @@ const SendOrderController_1 = require("./controllers/order/SendOrderController")
 const ListOrdersController_1 = require("./controllers/order/ListOrdersController");
 const DetailOrderController_1 = require("./controllers/order/DetailOrderController");
 const FinishOrderController_1 = require("./controllers/order/FinishOrderController");
-const multer_2 = __importDefault(require("./config/multer"));
+//import uploadConfig from "./config/multer"
 const router = (0, express_1.Router)();
 exports.router = router;
-const upload = (0, multer_1.default)(multer_2.default.upload("./tmp"));
+//const upload = multer(uploadConfig.upload("./tmp"))
 //===ROTAS USER====//
 router.post("/users", new createUserController_1.CreateUserController().handle);
 router.post("/session", new AuthUserController_1.AuthUserController().handle);
