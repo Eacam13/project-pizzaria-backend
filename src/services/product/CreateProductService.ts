@@ -19,8 +19,9 @@ class CreateProductService{
                 banner: banner,
                 category_id: category_id,
             }
+            
         })
-
+        console.log(product)
         return product
     }
 }
