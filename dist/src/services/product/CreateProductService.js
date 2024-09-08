@@ -26,6 +26,7 @@ class CreateProductService {
                     category_id: category_id,
                 }
             });
+            console.log(product);
             return product;
         });
     }
