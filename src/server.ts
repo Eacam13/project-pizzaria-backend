@@ -11,6 +11,15 @@ import fileUpload from 'express-fileupload';
 
 const app = express();
 
+// Configuração de CORS, permitindo o domínio do frontend
+const corsOptions = {
+    origin: ['https://project-pizzaria-web.vercel.app', 'http://localhost:3000'], // Seu domínio frontend e localhost
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true, // Permite envio de cookies e autenticação
+  };
+  
+  app.use(cors(corsOptions)); // Aplica o middleware de CORS
+
 app.use(express.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerFile))
 app.use(cors());
