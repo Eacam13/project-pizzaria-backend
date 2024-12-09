@@ -8,11 +8,12 @@ cloudinary.config({
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET
 })
+
 class CreateProductController{
     async handle(req: Request, res: Response){
 
         const { name, price, description, category_id } = req.body
-
+    
 
         const createProductService = new CreateProductService()
 

@@ -13,7 +13,7 @@ const app = express();
 
 // Configuração de CORS, permitindo o domínio do frontend
 const corsOptions = {
-    origin: ['https://project-pizzaria-web.vercel.app', 'http://localhost:3000'], // Seu domínio frontend e localhost
+    origin: ['http://project-pizzaria-web.vercel.app', 'http://localhost:3000'], // Seu domínio frontend e localhost
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true, // Permite envio de cookies e autenticação
   };
